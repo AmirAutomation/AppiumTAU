@@ -29,17 +29,34 @@ Link: https://www.oracle.com/co/java/technologies/javase/javase8-archive-downloa
 link: https://nodejs.org/en/
 
 **consultar la version**
--javac -version
--npm -v
--node -v
+* -javac -version
+* -npm -v
+* -node -v
 
-Install Appium 
+**Install Appium**
 npm install -g appium
 
-Android Studio
+**Android Studio**
 Link: https://developer.android.com/studio
 
-Appium doctor: sirve para validar si nuestr sistema cumple con las configuraciones para ejecutar
-el emulador de android
-
+**Appium doctor**
+* Lo utilizamos para verificar que nuestro sistema cumple con las configuraciones minimas para ejecutar el emulador de android
 npm i -g appium-doctor
+
+**Concepts Android**
+* Apk file: El Apk o Apk de Google Play
+* AppActivityName: funcionalidades de la App
+* AppPackage: com.google.adroid.youtube
+
+**Concepts IOS**
+* .IPA file: App 
+* BundleID: Es el paquete que identifica com.google.ios.youtube
+* UDID: Identificador unico de Apple
+El UDID se usa cuando se van a ejecutar pruebas en aplicativo real se necesita para parar la capabilitis del dispostivo
+
+**App**
+ApuDemos-debug.apk
+
+Capabilities: son key en formato JSON para la configuracion la conexion del servidor de appium con el emulador
+
+* Documentacion: http://appium.io/docs/en/writing-running-appium/caps/index.html
