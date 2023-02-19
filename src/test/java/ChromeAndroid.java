@@ -3,17 +3,14 @@ import io.appium.java_client.android.AndroidDriver;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
 
 import java.net.MalformedURLException;
 import java.net.URL;
 
+public class ChromeAndroid {
 
-public class    PrimerAndroidTest {
-
-   AppiumDriver driver;
+    AndroidDriver driver;
 
     @Before
     public void setUpO() throws MalformedURLException {
@@ -22,24 +19,19 @@ public class    PrimerAndroidTest {
         caps.setCapability("automationName", "Uiautomator2");
         caps.setCapability("platformVersion", "13.0");
         caps.setCapability("deviceName", "Automation");
-        caps.setCapability("app","C:\\Appium\\PrimerProyectoDemo\\apps\\ApiDemos.apk");
+        caps.setCapability("browserName", "Chrome");
 
         driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), caps);
     }
-
     @Test
-    public void click_App(){
+    public void sumaCalculator(){
 
-        System.out.println("Test**********************************");
-        driver.findElement(By.id("App")).click();
-
+        driver.get("https://www.heroku.com/");
     }
-
     @After
     public void down(){
         if (driver!=null){
             driver.quit();
         }
     }
-
 }
